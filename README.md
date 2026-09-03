@@ -47,5 +47,5 @@ Designed in KiCad.
 
 Initial circuit topology was referred from a youtube guide for learning purpose. Building on that base, the closed-loop PI controller design, gain tuning, dynamic PWM duty cycle generation, and PCB schematic/layout in KiCad were done independently.
 
-- [e.g. compare PI vs PID or peak-current-mode control]
+
 
