@@ -14,9 +14,9 @@ A 5V-to-12V boost converter designed and simulated for closed-loop steady-state 
 
 ## Design Approach
 
-- The converter operates at 100 kHz switching frequency, chosen to [balance inductor/capacitor size against switching losses — replace with your actual reasoning].
-- Inductor and output capacitor values were selected to keep output voltage ripple under [X]% and ensure continuous conduction mode at the target load range — fill in your actual values.
-- The PI controller gains (Kp = [value], Ki = [value]) were tuned by [method used] to regulate output voltage against load transients.
+- The converter operates at 100 kHz switching frequency, chosen to minimize the size and weight of the inductor and capacitor while keeping power loss and heat low. In space hardware, keeping components lightweight is critical, but cooling in a vacuum is difficult. Operating at 100 kHz provides the ideal balance: it allows for a compact PCB footprint while delivering a clean output.
+- Inductor and output capacitor values were selected to keep output voltage ripple under 0.13% and ensure continuous conduction mode at the target load range.
+- The PI controller gains (Kp = 0.01, Ki = 50) were tuned to regulate output voltage against load transients.
 - PWM duty cycle is generated dynamically based on the PI controller's error signal between reference (12V) and sensed output voltage.
 
 ## Repository Structure
@@ -32,9 +32,9 @@ A 5V-to-12V boost converter designed and simulated for closed-loop steady-state 
 
 ## Results
 
-**Steady-state output voltage:** [X.X] V
-**Settling time:** [X] ms
-**Voltage ripple:** [X] mV / [X]%
+**Steady-state output voltage:** 12 V
+**Settling time:** 50 ms
+**Voltage ripple:** 15.91 mV / 0.13%
 
 ## PCB
 
